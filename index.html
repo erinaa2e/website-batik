@@ -11,71 +11,77 @@
     <!-- EMAIL JS -->
      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Segoe UI", sans-serif;
-      }
-      .carousel-item {
-        height: 80vh;
-        min-height: 400px;
-        background: no-repeat center center/cover;
-        position: relative;
-      }
-      .carousel-caption {
-        bottom: 20%;
-        z-index: 10;
-      }
-      .carousel-caption h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-      }
-      .about img {
-        border-radius: 10px;
-      }
-      footer {
-        background: #212529;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-      }
+     html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #c241c7, #df66d9); /* gradasi coklat elegan */
+  color: #2c2c2c;
+}
+.carousel-item {
+  height: 80vh;
+  min-height: 400px;
+  background: no-repeat center center/cover;
+  position: relative;
+}
+.carousel-caption {
+  bottom: 20%;
+  z-index: 10;
+}
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.about img {
+  border-radius: 10px;
+}
+footer {
+  background: #4e342e; /* coklat tua */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
 
-      /* gallery */
-      .card-img-top {
-        object-fit: cover;
-        height: 240px;
-      }
-      @media (max-width: 768px) {
-        .card-img-top {
-          height: 160px;
-        }
-      }
+/* gallery */
+.card-img-top {
+  object-fit: cover;
+  height: 240px;
+}
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 160px;
+  }
+}
 
-      .filter-btns .btn {
-        margin-right: 6px;
-        margin-bottom: 8px;
-      }
-      .hidden {
-        display: none !important;
-      }
+.filter-btns .btn {
+  margin-right: 6px;
+  margin-bottom: 8px;
+}
+.hidden {
+  display: none !important;
+}
 
-      /* modal image viewer */
-      .img-modal .modal-dialog {
-        max-width: 900px;
-      }
-      .img-modal img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
+/* modal image viewer */
+.img-modal .modal-dialog {
+  max-width: 900px;
+}
+.img-modal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-      /* small styling for sections */
-      section {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
+/* small styling for sections */
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgba(255, 255, 255, 0.8); /* semi transparan biar elegan */
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
     </style>
   </head>
   <body>
@@ -146,9 +152,11 @@
           <div class="col-md-6" data-aos="fade-left">
             <h2>Tentang Batik</h2>
             <p>
-              Batik adalah salah satu warisan budaya Indonesia yang telah diakui oleh UNESCO sebagai Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi (Masterpieces of the Oral and Intangible Heritage of Humanity) pada 2 Oktober 20091.
-              Sejak saat itu, tanggal 2 Oktober ditetapkan sebagai Hari Batik Nasional oleh Presiden Susilo Bambang Yudhoyono melalui Keputusan Presiden Nomor 33 Tahun 20092. Hari Batik Nasional merupakan bentuk apresiasi dan rasa bangga
-              bangsa Indonesia terhadap batik sebagai salah satu simbol kebudayaan dan identitas nasional.
+             Batik memiliki sejarah yang panjang di Indonesia, dan proses pembuatannya dapat ditelusuri sejak zaman Kerajaan Majapahit (sekitar abad ke-13). Pada masa itu, batik awalnya hanya digunakan oleh kalangan istana dan bangsawan sebagai simbol status sosial. Motif-motif tertentu seperti motif "parang" atau "lereng" bahkan dikhususkan untuk keluarga kerajaan. Seiring berjalannya waktu, batik mulai menyebar ke kalangan masyarakat umum dan menjadi bagian integral dari budaya Indonesia.
+
+Pada abad ke-19, batik mulai diperkenalkan ke luar negeri oleh pedagang Belanda, terutama setelah berdirinya kota-kota pelabuhan seperti Batavia (Jakarta), Solo, dan Yogyakarta sebagai pusat batik di Jawa. Keindahan dan kerumitan batik menarik perhatian masyarakat internasional, dan batik pun menjadi salah satu ikon budaya Indonesia yang terkenal di dunia.
+
+Pada tahun 2009, UNESCO menetapkan batik Indonesia sebagai "Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi." Pengakuan ini mengukuhkan batik sebagai warisan budaya yang perlu dilestarikan dan dikembangkan.
             </p>
             <p>
               Batik adalah sebuah teknik, simbol, dan kebudayaan terkait teknik mewarnai kain katun dan sutra dengan tangan (hand-dyed) yang berasal dari Indonesia1. Teknik batik meliputi proses pewarnaan kain dengan menggunakan malam
@@ -254,13 +262,9 @@
           dikembangkan oleh kerajaan - kerajaan di Jawa Tengah.[2] Di kerajaan Majapahit, Bangsawan Wengker menempati keraton ri Wengker dekat istana Wilwatikta Majapahit, Sehingga pengaruh batik Wengker dikembangkan pula oleh Kerajaan.
           Pada abad 15 di desa Mirah, Joko Lancur anak dari lurah Golan memasuki rumah lurah Mirah ketika mencari Ayam Jagonya, terlihat Dewi Amirah sedang membatik. eksistensi Batik Ponorogo hingga abad 20 merupakan surga bagi para
           pembatik, karena produksi batik di Ponorogo melampaui industri batik di Jawa Tengah maupun Yogyakarta yang kemudian diambil oleh pengepul batik dari Surakarta, Yogyakarta dan Pekalongan, selain itu upah pembatik di Ponorogo
-          tertinggi di Pulau Jawa. Kesenian batik di Indonesia telah dikenal sejak zaman Kerajaan Majapahit dan terus berkembang sampai kerajaan berikutnya beserta raja-rajanya. Kesenian batik secara umum meluas di Indonesia dan secara
-          khusus di pulau Jawa setelah akhir abad ke-18 atau awal abad ke-19. Teknik batik sendiri telah diketahui lebih dari 1.000 tahun, kemungkinan berasal dari Mesir kuno atau Sumeria. Teknik batik meluas di beberapa negara di Afrika
-          Barat seperti Nigeria, Kamerun, dan Mali, serta di Asia, seperti India, Sri Lanka, Bangladesh, Iran, Thailand, Malaysia dan Indonesia. Hingga awal abad ke-20, batik yang dihasilkan merupakan batik tulis. Batik cap baru dikenal
-          setelah Perang Dunia I berakhir atau sekitar tahun 1920. Kesenian batik adalah kesenian gambar di atas kain untuk pakaian yang menjadi salah satu kebudayaan keluarga kerajaan di Indonesia zaman dahulu. Awalnya kegiatan membatik
-          hanya terbatas dalam keraton saja dan batik dihasilkan untuk pakaian raja dan keluarga pemerintah dan para pembesar. Oleh karena banyak dari pembesar tinggal di luar keraton, maka kesenian batik ini dibawa oleh mereka keluar dari
-          keraton dan dihasilkan pula di tempatnya masing-masing. Lama kelamaan kesenian batik ini ditiru oleh rakyat jelata dan selanjutnya meluas sehingga menjadi pekerjaan kaum wanita rumah tangga untuk mengisi waktu luang mereka.
+          tertinggi di Pulau Jawa.
         </p>
+       
        
     </section>
 
@@ -414,10 +418,7 @@
 </section>
 
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Batik Nusantara.</p>
-    </footer>
+    
 
        <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -488,6 +489,21 @@
     });
   });
 </script>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    
+    <p class="mb-1">Telp:  (0341) 478195 (SMKN 5 Malang)</p>
+    <p class="mb-3">Lokasi: Jl. Terusan Ikan Piranha Atas No.50, Tunjungsekar, Kec. Lowokwaru, Kota Malang, Jawa Timur 65142</p>
+    
+    <div>
+      <a href="https://maps.app.goo.gl/CGtYM7TFaeBJgrLe8" target="_blank" class="btn btn-outline-light btn-sm">
+        📍 Lihat di Google Maps
+      </a>
+    </div>
+  </div>
+</footer>
 
   </body>
 </html>
