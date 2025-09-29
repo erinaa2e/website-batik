@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Batik Nusantara</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- EMAIL JS -->
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+      }
+      .carousel-item {
+        height: 80vh;
+        min-height: 400px;
+        background: no-repeat center center/cover;
+        position: relative;
+      }
+      .carousel-caption {
+        bottom: 20%;
+        z-index: 10;
+      }
+      .carousel-caption h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .about img {
+        border-radius: 10px;
+      }
+      footer {
+        background: #212529;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      /* gallery */
+      .card-img-top {
+        object-fit: cover;
+        height: 240px;
+      }
+      @media (max-width: 768px) {
+        .card-img-top {
+          height: 160px;
+        }
+      }
+
+      .filter-btns .btn {
+        margin-right: 6px;
+        margin-bottom: 8px;
+      }
+      .hidden {
+        display: none !important;
+      }
+
+      /* modal image viewer */
+      .img-modal .modal-dialog {
+        max-width: 900px;
+      }
+      .img-modal img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* small styling for sections */
+      section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Batik Nusantara</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="#jenis">Jenis & Asal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sejarah">Sejarah</a></li>
+            <li class="nav-item"><a class="nav-link" href="#filosofi">Cerita / Filosofi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kritik">Kritik & Saran</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section dengan Carousel -->
+    <section id="home">
+      <div id="batikCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image/Download Batik Background Concept for free.jpg" class="d-block w-100" alt="Batik Pattern" />
+            <div class="carousel-caption text-start" data-aos="fade-up">
+              <h1>Keindahan Batik Nusantara</h1>
+              <p>Warisan budaya yang tak ternilai</p>
+              <a href="#about" class="btn btn-warning">Pelajari Lebih Lanjut</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/batik kawung.jpg" class="d-block w-100" alt="Batik Kawung" />
+            <div class="carousel-caption" data-aos="fade-up">
+              <h1>Batik Kawung</h1>
+              <p>Motif klasik dengan filosofi kesucian.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/batik parang.jpg" class="d-block w-100" alt="Batik Parang" />
+            <div class="carousel-caption text-end" data-aos="fade-up">
+              <h1>Batik Parang</h1>
+              <p>Melambangkan kekuatan & keberanian.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#batikCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#batikCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="image/erina.jpeg" class="img-fluid" alt="Batik" />
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <h2>Tentang Batik</h2>
+            <p>
+              Batik adalah salah satu warisan budaya Indonesia yang telah diakui oleh UNESCO sebagai Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi (Masterpieces of the Oral and Intangible Heritage of Humanity) pada 2 Oktober 20091.
+              Sejak saat itu, tanggal 2 Oktober ditetapkan sebagai Hari Batik Nasional oleh Presiden Susilo Bambang Yudhoyono melalui Keputusan Presiden Nomor 33 Tahun 20092. Hari Batik Nasional merupakan bentuk apresiasi dan rasa bangga
+              bangsa Indonesia terhadap batik sebagai salah satu simbol kebudayaan dan identitas nasional.
+            </p>
+            <p>
+              Batik adalah sebuah teknik, simbol, dan kebudayaan terkait teknik mewarnai kain katun dan sutra dengan tangan (hand-dyed) yang berasal dari Indonesia1. Teknik batik meliputi proses pewarnaan kain dengan menggunakan malam
+              (lilin) untuk mencegah pewarna menempel pada bagian kain yang tidak diinginkan. Motif batik bermacam-macam, mulai dari geometris, flora, fauna, hingga figuratif. Motif batik juga memiliki makna dan filosofi tertentu,
+              tergantung pada daerah asal, sejarah, dan budaya masyarakat pembuatnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jenis & Asal -->
+    <section id="jenis" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2>Jenis Batik & Asal</h2>
+        <div class="row mt-4">
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <img src="image/batik sedapur.webp" class="card-img-top" alt="Batik Sedapur" />
+              <div class="card-body">
+                <h5 class="card-title">Batik Sedapur</h5>
+                <p class="card-text">
+                  <strong>Asal:</strong> Jawa Timur / Magetan.<br /><strong>Ciri:</strong> motif rumpun bambu yang menggambarkan persatuan dan keuletan, dengan garis-garis halus pada daun dan batang yang tegas menciptakan kesan natural.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <img src="image/batik simbut.jpg" class="card-img-top" alt="Batik Simbut" />
+              <div class="card-body">
+                <h5 class="card-title">Batik Simbut</h5>
+                <p class="card-text">
+                  <strong>Asal:</strong> Banten.<br /><strong>Ciri:</strong> motifnya menyerupai daun talas atau tumbuhan rambat yang sederhana namun memiliki filosofi kedekatan dengan alam dan makna harapan, sering kali dengan warna-warna
+                  cerah yang elegan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <img src="image/batik durian pecah.jpg" class="card-img-top" alt="Batik Durian Pecah" />
+              <div class="card-body">
+                <h5 class="card-title">Batik Durian Pecah</h5>
+                <p class="card-text">
+                  <strong>Asal:</strong> Sumatera / Jambi.<br /><strong>Ciri:</strong> menggambarkan buah durian yang terbelah dua, bertautan di pangkal tangkainya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <img src="image/batik kraton.jpg" class="card-img-top" alt="Batik Kraton" />
+              <div class="card-body">
+                <h5 class="card-title">Batik Kraton</h5>
+                <p class="card-text">
+                  <strong>Asal:</strong> Jawa Tengah / Yogyakarta.<br /><strong>Ciri:</strong> meliputi motif geometris yang sarat filosofi dan makna mendalam, warna dominan cokelat, putih, dan hitam, serta penggunaan motif-motif khusus yang awalnya hanya boleh dikenakan oleh keluarga raja dan bangsawan. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <img src="image/batik lasem.jpg" class="card-img-top" alt="Batik Lasem" />
+              <div class="card-body">
+                <h5 class="card-title">Batik Lasem</h5>
+                <p class="card-text">
+                  <strong>Asal:</strong> Jawa Tengah / Rembang.<br /><strong>Ciri:</strong>  dominasi warna-warna cerah seperti merah, biru, hijau botol, dan soga (cokelat).
+              </div>
+            </div>
+          </div>
+
+          
+
+    
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <img src="image/Batik pattern 3 Mega Mendung.jpg" class="card-img-top" alt="Batik Mega Mendung" />
+              <div class="card-body">
+                <h5 class="card-title">Batik Mega Mendung</h5>
+                <p class="card-text"><strong>Asal:</strong> Jawa Barat / Cirebon.<br /><strong>Ciri:</strong> motif awan berlapis-lapis yang sederhana namun mewah.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sejarah -->
+    <section id="sejarah" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2>Sejarah Batik</h2>
+        <p>
+          Sejarah Batik Indonesia terkait erat dengan perkembangan Kerajaan Majapahit dan penyebaran ajaran Islam di Pulau Jawa. Dalam beberapa catatan, pengembangan batik banyak dilakukan pada zaman Kesultanan Mataram, lalu berlanjut pada
+          zaman Kasunanan Surakarta dan Kesultanan Yogyakarta.[1] Keberadaan kegiatan Batik tertua berasal dari Raja yang masih bernama Wengker sebelum abad ke 7, Kerajaan di Jawa Tengah belajar batik dari Ponorogo. Karena itu, batik-batik
+          Ponorogo agak mirip dengan batik yang beredar di Jawa Tengah, hanya saja batik ponorogo batik yang dihasilkan rata-rata berwarna hitam pekat atau biasa disebut batik irengan karena yang dekat dengan unsur-unsur magis, sehinggga
+          dikembangkan oleh kerajaan - kerajaan di Jawa Tengah.[2] Di kerajaan Majapahit, Bangsawan Wengker menempati keraton ri Wengker dekat istana Wilwatikta Majapahit, Sehingga pengaruh batik Wengker dikembangkan pula oleh Kerajaan.
+          Pada abad 15 di desa Mirah, Joko Lancur anak dari lurah Golan memasuki rumah lurah Mirah ketika mencari Ayam Jagonya, terlihat Dewi Amirah sedang membatik. eksistensi Batik Ponorogo hingga abad 20 merupakan surga bagi para
+          pembatik, karena produksi batik di Ponorogo melampaui industri batik di Jawa Tengah maupun Yogyakarta yang kemudian diambil oleh pengepul batik dari Surakarta, Yogyakarta dan Pekalongan, selain itu upah pembatik di Ponorogo
+          tertinggi di Pulau Jawa. Kesenian batik di Indonesia telah dikenal sejak zaman Kerajaan Majapahit dan terus berkembang sampai kerajaan berikutnya beserta raja-rajanya. Kesenian batik secara umum meluas di Indonesia dan secara
+          khusus di pulau Jawa setelah akhir abad ke-18 atau awal abad ke-19. Teknik batik sendiri telah diketahui lebih dari 1.000 tahun, kemungkinan berasal dari Mesir kuno atau Sumeria. Teknik batik meluas di beberapa negara di Afrika
+          Barat seperti Nigeria, Kamerun, dan Mali, serta di Asia, seperti India, Sri Lanka, Bangladesh, Iran, Thailand, Malaysia dan Indonesia. Hingga awal abad ke-20, batik yang dihasilkan merupakan batik tulis. Batik cap baru dikenal
+          setelah Perang Dunia I berakhir atau sekitar tahun 1920. Kesenian batik adalah kesenian gambar di atas kain untuk pakaian yang menjadi salah satu kebudayaan keluarga kerajaan di Indonesia zaman dahulu. Awalnya kegiatan membatik
+          hanya terbatas dalam keraton saja dan batik dihasilkan untuk pakaian raja dan keluarga pemerintah dan para pembesar. Oleh karena banyak dari pembesar tinggal di luar keraton, maka kesenian batik ini dibawa oleh mereka keluar dari
+          keraton dan dihasilkan pula di tempatnya masing-masing. Lama kelamaan kesenian batik ini ditiru oleh rakyat jelata dan selanjutnya meluas sehingga menjadi pekerjaan kaum wanita rumah tangga untuk mengisi waktu luang mereka.
+        </p>
+       
+    </section>
+
+    <!-- Cerita / Filosofi -->
+    <section id="filosofi" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2>Cerita & Filosofi Motif</h2>
+        <ul>
+          <li><strong>Kawung:</strong> Simbol keseimbangan dan kesucian. Motif ini sering dipakai untuk menandai kedudukan istimewa.</li>
+          <li><strong>Parang:</strong> Melambangkan keberanian, terus berjuang, dan kesinambungan generasi.</li>
+          <li><strong>Sogan:</strong> Melambangkan kebangsawanan dan upacara resmi — biasa dipakai oleh kelas ningrat.</li>
+          <li><strong>Motif Lokal Lainnya:</strong> Setiap daerah (Bali, Madura, Pekalongan, Cirebon, dsb.) punya motif khas yang merefleksikan alam dan cerita lokal.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Galeri Model Baju dengan filter kategori -->
+    <section id="gallery" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-3">Galeri Model Baju</h2>
+        <p class="text-center text-muted">Pilih kategori untuk menampilkan: Pria / Wanita Hijab / Wanita Non-Hijab — masing-masing punya versi Resmi & Tradisional</p>
+
+        <!-- filter buttons -->
+        <div class="text-center filter-btns mb-4">
+          <button class="btn btn-outline-primary btn-sm" data-filter="all">Semua</button>
+          <button class="btn btn-outline-primary btn-sm" data-filter="pria">Pria</button>
+          <button class="btn btn-outline-primary btn-sm" data-filter="wanita-hijab">Wanita Hijab</button>
+          <button class="btn btn-outline-primary btn-sm" data-filter="wanita-nonhijab">Wanita Non-Hijab</button>
+          <button class="btn btn-outline-secondary btn-sm" data-filter="resmi">Resmi</button>
+          <button class="btn btn-outline-secondary btn-sm" data-filter="tradisional">Tradisional</button>
+        </div>
+
+        <div class="row g-4" id="galleryGrid">
+          <!-- each card has data-category attributes: gender + style -->
+          <!-- Pria - Resmi -->
+          <div class="col-md-4 gallery-item" data-gender="pria" data-style="resmi" data-aos="flip-left">
+            <div class="card h-100">
+              <img src="image/resmi pria.jpg" class="card-img-top" alt="Pria Resmi" />
+              <div class="card-body">
+                <h5 class="card-title">Pria - Resmi</h5>
+                <p class="card-text">Kemeja batik lengan panjang, cocok acara formal.</p>
+                <button class="btn btn-sm btn-outline-dark view-image" data-src="image/resmi pria.jpg">Lihat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pria - Tradisional -->
+          <div class="col-md-4 gallery-item" data-gender="pria" data-style="tradisional" data-aos="flip-up">
+            <div class="card h-100">
+              <img src="image/tradisional pria.jpg" class="card-img-top" alt="Pria Tradisional" />
+              <div class="card-body">
+                <h5 class="card-title">Pria - Tradisional</h5>
+                <p class="card-text">Contoh: beskap atau pakaian adat pria + sarung.</p>
+                <button class="btn btn-sm btn-outline-dark view-image" data-src="image/tradisional pria 1.jpg">Lihat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wanita Hijab - Resmi -->
+          <div class="col-md-4 gallery-item" data-gender="wanita-hijab" data-style="resmi" data-aos="flip-right">
+            <div class="card h-100">
+              <img src="image/resmi hijab.jpeg" class="card-img-top" alt="Wanita Hijab Resmi" />
+              <div class="card-body">
+                <h5 class="card-title">Wanita Hijab - Resmi</h5>
+                <p class="card-text">Kebaya modern berpadu batik, menggunakan hijab rapi.</p>
+                <button class="btn btn-sm btn-outline-dark view-image" data-src="image/resmi hijab.jpeg">Lihat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wanita Hijab - Tradisional -->
+          <div class="col-md-4 gallery-item" data-gender="wanita-hijab" data-style="tradisional" data-aos="flip-left">
+            <div class="card h-100">
+              <img src="image/tradisional hijab.jpeg" class="card-img-top" alt="Wanita Hijab Tradisional" />
+              <div class="card-body">
+                <h5 class="card-title">Wanita Hijab - Tradisional</h5>
+                <p class="card-text">Kebaya tradisional + kerudung khas daerah.</p>
+                <button class="btn btn-sm btn-outline-dark view-image" data-src="image/tradisional hijab.jpeg">Lihat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wanita Non-Hijab - Resmi -->
+          <div class="col-md-4 gallery-item" data-gender="wanita-nonhijab" data-style="resmi" data-aos="flip-up">
+            <div class="card h-100">
+              <img src="image/resmi non hijab.jpeg" class="card-img-top" alt="Wanita Non Hijab Resmi" />
+              <div class="card-body">
+                <h5 class="card-title">Wanita Non-Hijab - Resmi</h5>
+                <p class="card-text">Dress batik atau kebaya modern untuk acara formal.</p>
+                <button class="btn btn-sm btn-outline-dark view-image" data-src="image/resmi non hijab.jpeg">Lihat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wanita Non-Hijab - Tradisional -->
+          <div class="col-md-4 gallery-item" data-gender="wanita-nonhijab" data-style="tradisional" data-aos="flip-right">
+            <div class="card h-100">
+              <img src="image/tradisional non hijab.jpeg" class="card-img-top" alt="Wanita Non Hijab Tradisional" />
+              <div class="card-body">
+                <h5 class="card-title">Wanita Non-Hijab - Tradisional</h5>
+                <p class="card-text">Kebaya tradisional lengkap dengan kain batik.</p>
+                <button class="btn btn-sm btn-outline-dark view-image" data-src="image/tradisional non hijab.jpeg">Lihat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal untuk melihat gambar -->
+      <div class="modal fade img-modal" id="imgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <button type="button" class="btn-close m-2 position-absolute end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+              <img src="" alt="Preview" id="modalImg" />
+            </div>
+            <div class="modal-footer">
+              <a id="downloadImg" href="#" download class="btn btn-sm btn-primary">Download</a>
+              <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kritik & Saran -->
+   <!-- Kritik & Saran -->
+<section id="kritik" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Kritik & Saran</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form id="kritikForm">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" name="user_name" placeholder="Masukkan nama Anda" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="user_email" placeholder="Masukkan email Anda" required />
+          </div>
+          <div class="mb-3">
+            <label for="pesan" class="form-label">Kritik & Saran</label>
+            <textarea class="form-control" id="pesan" name="message" rows="3" placeholder="Tulis kritik atau saran Anda" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Kirim</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Batik Nusantara.</p>
+    </footer>
+
+       <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+      // Inisialisasi AOS
+      AOS.init();
+
+      // Inisialisasi EmailJS
+      (function() {
+        emailjs.init("BNnL3JnQGB1GZjAKp"); // 👉 Ganti dengan Public Key kamu dari EmailJS
+      })();
+
+      // Event submit form
+      document.getElementById("kritikForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm("service_fgpkhrp", "template_jgipj3s", this)
+          .then(function(response) {
+            alert("✅ Pesan berhasil terkirim!");
+            document.getElementById("kritikForm").reset();
+          }, function(error) {
+            alert("❌ Gagal mengirim pesan: " + JSON.stringify(error));
+          });
+      });
+    </script>
+    <script>
+  // Filter tombol galeri
+  const filterBtns = document.querySelectorAll(".filter-btns .btn");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+
+      galleryItems.forEach(item => {
+        const gender = item.getAttribute("data-gender");
+        const style = item.getAttribute("data-style");
+
+        if (
+          filter === "all" ||
+          filter === gender ||
+          filter === style
+        ) {
+          item.classList.remove("hidden");
+        } else {
+          item.classList.add("hidden");
+        }
+      });
+
+      // aktifkan tombol yang sedang dipilih
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
+  // Modal preview gambar
+  document.querySelectorAll(".view-image").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const src = this.getAttribute("data-src");
+      document.getElementById("modalImg").src = src;
+      document.getElementById("downloadImg").href = src;
+      new bootstrap.Modal(document.getElementById("imgModal")).show();
+    });
+  });
+</script>
+
+  </body>
+</html>
+
